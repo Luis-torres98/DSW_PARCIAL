@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FUENTE_SODAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="VENDEDOR">
+    <Key>
+      <PropertyRef Name="IDE_VEN" />
+    </Key>
+    <Property Name="IDE_VEN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOM_VEN" Type="varchar" MaxLength="30" />
+    <Property Name="APE_VEN" Type="varchar" MaxLength="30" />
+    <Property Name="DIR_VEN" Type="varchar" MaxLength="30" />
+    <Property Name="TEL_VEN" Type="varchar" MaxLength="15" />
+    <Property Name="IDE_DIS" Type="int" />
+    <Property Name="COR_VEN" Type="varchar" MaxLength="50" />
+    <Property Name="SUE_VEN" Type="money" />
+    <Property Name="FOTO" Type="image" />
+  </EntityType>
+  <EntityContainer Name="FUENTE_SODAModelStoreContainer">
+    <EntitySet Name="VENDEDOR" EntityType="Self.VENDEDOR" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

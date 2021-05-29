@@ -1,0 +1,90 @@
+﻿@model APP_PARCIAL.Models.VENDEDOR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Vista del Vendedor , @Model.NOM_VEN @Model.APE_VEN</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="padding: 10px 0; font-size: 20px;">
+            ID
+        </dt>
+
+        <dd  style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.IDE_VEN)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+           NOMBRE
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.NOM_VEN)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+           APELLIDO
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.APE_VEN)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+           DIRECCIÓN
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.DIR_VEN)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+          TELEFONO
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.TEL_VEN)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+          DISTRITO
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.IDE_DIS)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+          CORREO
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.COR_VEN)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+            SUELDO
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            @Html.DisplayFor(model => model.SUE_VEN)
+        </dd>
+
+        <dt style="padding: 10px 0; font-size: 20px;">
+           FOTO
+        </dt>
+
+        <dd style="padding: 10px 0; font-size: 20px;">
+            <img width="100" src="@Url.Action("obtenerImagen","Vendedor", new { id =Model.IDE_VEN })" />
+        </dd>
+
+    </dl>
+</div>
+<p class="btn btn-danger" style="color: black; font-weight: bold; text-decoration:none;">
+   
+    @Html.ActionLink("Back to List", "Index")
+</p>

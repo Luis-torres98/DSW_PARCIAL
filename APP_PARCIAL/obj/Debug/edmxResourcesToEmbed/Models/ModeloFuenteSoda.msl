@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FUENTE_SODAModelStoreContainer" CdmEntityContainer="FUENTE_SODAEntities">
+    <EntitySetMapping Name="VENDEDOR">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel.VENDEDOR">
+        <MappingFragment StoreEntitySet="VENDEDOR">
+          <ScalarProperty Name="IDE_VEN" ColumnName="IDE_VEN" />
+          <ScalarProperty Name="NOM_VEN" ColumnName="NOM_VEN" />
+          <ScalarProperty Name="APE_VEN" ColumnName="APE_VEN" />
+          <ScalarProperty Name="DIR_VEN" ColumnName="DIR_VEN" />
+          <ScalarProperty Name="TEL_VEN" ColumnName="TEL_VEN" />
+          <ScalarProperty Name="IDE_DIS" ColumnName="IDE_DIS" />
+          <ScalarProperty Name="COR_VEN" ColumnName="COR_VEN" />
+          <ScalarProperty Name="SUE_VEN" ColumnName="SUE_VEN" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,78 @@
+﻿@model IEnumerable<APP_PARCIAL.Models.VENDEDOR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2> Gestor de Vendedores</h2>
+
+<p>
+    @Html.ActionLink("Agregar Vendedor", "Create", null, new { @class = "btn btn-success" })
+</p>
+<br /><br />
+<table class="table table-bordered table-striped" >
+    <tr>
+        <th>
+          ID
+        </th>
+        <th>
+           NOMBRE
+        </th>
+        <th>
+            APELLIDO
+        </th>
+        <th>
+          DIRECCION
+        </th>
+        <th>
+           TELEFONO
+        </th>
+        <th>
+            DISTRITO
+        </th>
+        <th>
+           CORREO
+        </th>
+        <th>
+            SUELDO
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.IDE_VEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NOM_VEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.APE_VEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DIR_VEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TEL_VEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IDE_DIS)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.COR_VEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SUE_VEN)
+    </td>
+    
+    <td>
+        @Html.ActionLink("Actualizar", "Edit", new {  id = item.IDE_VEN  }) |
+        @Html.ActionLink("Ver Detalle", "Details", new { id = item.IDE_VEN }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.IDE_VEN })
+    </td>
+</tr>
+}
+
+</table>

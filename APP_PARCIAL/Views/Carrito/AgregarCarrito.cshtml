@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "AgregarCarrito";
+}
+
+<h2>Agregar Producto al Carrito</h2>
+<br />
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>DESCRIPCION</th>
+            <th>CATEGORIA</th>
+            <th>PRECIO</th>
+            <th>STOCK</th>
+            <th>IMAGEN</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            double total = 0;
+        }
+        @if (Session["carrito"] != null)
+        {
+            foreach (var item in Session["carrito"] as List<APP_PARCIAL.Models.CarritoItem>)
+            {
+                total += (double)(item.Cantidad * item.Producto.PRE_PRO);
+                <tr>
+                    <td>@item.Producto.IDE_PRO</td>
+
+                    <td>@item.Producto.DES_PRO</td>
+
+                    <td>@item.Producto.IDE_CAT</td>
+
+                    <td>@string.Format("{0:C}", (item.Cantidad * item.Producto.PRE_PRO))</td>
+
+                    <td>@item.Producto.STO_PRO</td>
+
+                    <td>@item.Producto.IMG_PRO</td>
+
+                    <td>@Html.ActionLink("Eliminar", "Delete", "Carrito", new { Id = item.Producto.IDE_PRO }, null)</td>
+
+                </tr>
+            }
+        }
+    </tbody>
+    <tr></tr>
+    <tfoot>
+        <tr>
+        </tr>
+        <tr>
+            <th colspan="4">Total</th>
+            <th>@string.Format("{0:C}", total)</th>
+        </tr>
+    </tfoot>
+</table>
+<br />
+<div class="btn btn-danger ">
+    @Html.ActionLink("Seguir comprando", "Index", "Producto", null, null)
+    </div>
+    <div class="btn btn-success ">
+        @Html.ActionLink("Finalizar compra", "FinalizarCompra", "Carrito", null, null)
+    </div>
+

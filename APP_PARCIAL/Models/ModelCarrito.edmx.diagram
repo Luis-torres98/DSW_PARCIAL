@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="12dbab0212e44212ac573236c1e87b8d" Name="Diagram1">
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.BOLETA" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.CATEGORIA" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.CLIENTE" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.DETALLEBOLETA" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.DISTRITO" Width="1.5" PointX="1.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.LISTAVENTA" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.PRODUCTO" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.VENDEDOR" Width="1.5" PointX="0.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FUENTE_SODAModel1.VENTA" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__BOLETA__IDE_CLI__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__BOLETA__IDE_VEN__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__DETALLEBO__NUM_B__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__PRODUCTO__IDE_CA__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__CLIENTE__IDE_DIS__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__DETALLEBO__IDE_P__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__VENDEDOR__FOTO__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__LISTAVENT__ID_PR__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="FUENTE_SODAModel1.FK__LISTAVENT__TOTAL__5EBF139D" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

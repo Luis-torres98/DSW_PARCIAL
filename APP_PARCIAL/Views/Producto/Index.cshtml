@@ -1,0 +1,82 @@
+﻿@model IEnumerable<APP_PARCIAL.Models.PRODUCTO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Productos</h2>
+<br />
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>DESCRIPCION</th>
+            <th>CATEGORIA</th>
+            <th>PRECIO</th>
+            <th>STOCK</th>
+            <th>CANTIDAD</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@item.IDE_PRO</th>
+                <th>@item.DES_PRO</th>
+                <th>@item.IDE_CAT</th>
+                <td>@String.Format("{0:C}", item.PRE_PRO)</td>
+                <th>@item.STO_PRO </th>
+                <td><input type="number" class="form-control numbers" id="num" min="0" value="" /></td>
+                @*  <td><a href="" class="agregar">Agregar producto</a></td>*@
+                <td>@Html.ActionLink("Agregar", "AgregarCarrito", "Carrito", new { Id = item.IDE_PRO, cat = 2  }, null)</td>
+            </tr>
+        }
+
+    </tbody>
+
+
+
+</table>
+
+@*
+    @section Scripts
+    {
+        <script>
+            $(function () {
+                $(".agregar").on("click", function (event) {
+                    event.preventDefault();
+                    var ProductoId = $(this).parent().parent().find("td:eq(0)").text();
+                    var cantidad = $(this).parent().parent().find("input").val();
+
+                    $.ajax(
+                        {
+                            url: "@Url.Action("AgregarCarrito","Carrito")",
+                            data: { id: ProductoId, cantidad: cantidad },
+                            type: "post",
+                            success: function (response) {
+                                window.location.href = "@Url.Action("AgregarCarrito","Carrito")";
+                            },
+                            error: function (err, error) {
+                                alert(error);
+                            }
+                        }
+                    );
+
+                });
+
+                $(".numbers").keydown(function (e) {
+
+                    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 40]) !== -1 ||
+                        (e.keyCode == 65 && e.ctrlKey == true) ||
+                        (e.keyCode >= 35 && e.keyCode <= 39)) {
+                        return;
+                    }
+
+                    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                        e.preventDefault();
+                    }
+                });
+            });
+        </script>
+    }*@

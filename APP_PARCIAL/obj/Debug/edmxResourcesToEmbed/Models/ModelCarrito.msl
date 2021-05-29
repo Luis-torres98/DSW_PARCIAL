@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FUENTE_SODAModel1StoreContainer" CdmEntityContainer="FUENTE_SODAEntities2">
+    <EntitySetMapping Name="BOLETA">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.BOLETA">
+        <MappingFragment StoreEntitySet="BOLETA">
+          <ScalarProperty Name="NUM_BOL" ColumnName="NUM_BOL" />
+          <ScalarProperty Name="FEC_BOL" ColumnName="FEC_BOL" />
+          <ScalarProperty Name="IDE_CLI" ColumnName="IDE_CLI" />
+          <ScalarProperty Name="IDE_VEN" ColumnName="IDE_VEN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORIA">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.CATEGORIA">
+        <MappingFragment StoreEntitySet="CATEGORIA">
+          <ScalarProperty Name="ID_CAT" ColumnName="ID_CAT" />
+          <ScalarProperty Name="DES_CAT" ColumnName="DES_CAT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="IDE_CLI" ColumnName="IDE_CLI" />
+          <ScalarProperty Name="NOM_CLI" ColumnName="NOM_CLI" />
+          <ScalarProperty Name="MOV_CLI" ColumnName="MOV_CLI" />
+          <ScalarProperty Name="IDE_DIS" ColumnName="IDE_DIS" />
+          <ScalarProperty Name="COR_CLI" ColumnName="COR_CLI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLEBOLETA">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.DETALLEBOLETA">
+        <MappingFragment StoreEntitySet="DETALLEBOLETA">
+          <ScalarProperty Name="NUM_BOL" ColumnName="NUM_BOL" />
+          <ScalarProperty Name="IDE_PRO" ColumnName="IDE_PRO" />
+          <ScalarProperty Name="CAN_ART" ColumnName="CAN_ART" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRITO">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.DISTRITO">
+        <MappingFragment StoreEntitySet="DISTRITO">
+          <ScalarProperty Name="IDE_DIS" ColumnName="IDE_DIS" />
+          <ScalarProperty Name="DES_DIS" ColumnName="DES_DIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LISTAVENTA">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.LISTAVENTA">
+        <MappingFragment StoreEntitySet="LISTAVENTA">
+          <ScalarProperty Name="ID_LIS_VEN" ColumnName="ID_LIS_VEN" />
+          <ScalarProperty Name="ID_VEN" ColumnName="ID_VEN" />
+          <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+          <ScalarProperty Name="CAN_LIS_VEN" ColumnName="CAN_LIS_VEN" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="IDE_PRO" ColumnName="IDE_PRO" />
+          <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+          <ScalarProperty Name="IDE_CAT" ColumnName="IDE_CAT" />
+          <ScalarProperty Name="PRE_PRO" ColumnName="PRE_PRO" />
+          <ScalarProperty Name="STO_PRO" ColumnName="STO_PRO" />
+          <ScalarProperty Name="IMG_PRO" ColumnName="IMG_PRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENDEDOR">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.VENDEDOR">
+        <MappingFragment StoreEntitySet="VENDEDOR">
+          <ScalarProperty Name="IDE_VEN" ColumnName="IDE_VEN" />
+          <ScalarProperty Name="NOM_VEN" ColumnName="NOM_VEN" />
+          <ScalarProperty Name="APE_VEN" ColumnName="APE_VEN" />
+          <ScalarProperty Name="DIR_VEN" ColumnName="DIR_VEN" />
+          <ScalarProperty Name="TEL_VEN" ColumnName="TEL_VEN" />
+          <ScalarProperty Name="IDE_DIS" ColumnName="IDE_DIS" />
+          <ScalarProperty Name="COR_VEN" ColumnName="COR_VEN" />
+          <ScalarProperty Name="SUE_VEN" ColumnName="SUE_VEN" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTA">
+      <EntityTypeMapping TypeName="FUENTE_SODAModel1.VENTA">
+        <MappingFragment StoreEntitySet="VENTA">
+          <ScalarProperty Name="ID_VEN" ColumnName="ID_VEN" />
+          <ScalarProperty Name="DIA_VEN" ColumnName="DIA_VEN" />
+          <ScalarProperty Name="SUB_TOT" ColumnName="SUB_TOT" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
